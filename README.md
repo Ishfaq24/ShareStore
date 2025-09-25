@@ -11,11 +11,21 @@ Share Store allows users to register, log in, upload files, and manage access pe
 
 **Screenshots**  
 
-
+<section style="text-align:center" align="center">
+    <img src='screenshots/login.png?raw=true' alt='Files posted/uploaded by a discord bot to a specific thread/channel.' width='250px' />
+</section>
 <section style="text-align:center" align="center">
     <img src='screenshots/register.png?raw=true' alt='Files posted/uploaded by a discord bot to a specific thread/channel.' width='250px' />
 </section>
-
+<section style="text-align:center" align="center">
+    <img src='screenshots/app.png?raw=true' alt='Files posted/uploaded by a discord bot to a specific thread/channel.' width='250px' />
+</section>
+<section style="text-align:center" align="center">
+    <img src='screenshots/app2.png?raw=true' alt='Files posted/uploaded by a discord bot to a specific thread/channel.' width='250px' />
+</section>
+<section style="text-align:center" align="center">
+    <img src='screenshots/app3.png?raw=true' alt='Files posted/uploaded by a discord bot to a specific thread/channel.' width='250px' />
+</section>
 ### Distinctiveness and Complexity
 1. **Distinctiveness**:
     - **Unique Purpose**: Share Store specializes in secure file sharing and storage, setting it apart from traditional social networks or e-commerce sites.

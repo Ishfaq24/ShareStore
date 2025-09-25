@@ -1,0 +1,44 @@
+{% extends "drive/layout.html" %}
+{% load static %}
+{% block body %}
+    {% if user.is_authenticated %}
+        <div class="d-flex flex-grow-1" style="background: black;">
+            <div class="container-fluid p-2">
+                {% if not files %}
+                    <div class="alert alert-info" role="alert">
+                        No files here! <a href="{% url 'upload' %}" class="alert-link">Upload a FILE</a>.
+                    </div>
+                {% else %}
+                    <div class="d-flex p-2 mb-1 border bg-light">
+                        <div class="text-dark col-7 fw-bold">File Name</div>
+                        <div class="text-dark col-md-3 d-none d-md-block fw-bold">File Size</div>
+                        <div class="text-dark text-center col-md-2 col-sm-5 fw-bold sp-width">Actions</div>
+                    </div>
+                    {% csrf_token %}
+                    {% for file in files %}
+                        <div class="d-flex p-2 border border-dark my-1 file">
+                                <div class="col-7 fields">{{ file.name }}</div>
+                                <div class="col-md-3 d-none d-md-block fields"><small>{{ file.formatted_size }}</small></div>
+                                <div class="col-md-2 col-sm-5 fields d-flex justify-content-center sp-width">
+                                    <div class="me-3">
+                                        <a href="{% url 'download' file.id %}"><i class="fa fa-cloud-download fa-2x" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="me-3"> 
+                                        <a href="{% url 'file' file.id %}"><i class="fa fa-info-circle fa-2x" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="d-none d-lg-block">
+                                        <i class="fa fa-trash fa-2x remove-file" aria-hidden="true" data-id="{{ file.id }}"></i>
+                                    </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+    {% else %}
+        <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1 py-3" style="background: black;">
+            <h1 class="tagline">Share Moments, Store Dreams</h1>
+            <a href="{% url 'login' %}" class="btn btn-outline-info btn-lg">Login</a>
+    {% endif %}
+    </div>
+    <script src="{% static 'drive/index.js' %}" type="module"></script>
+{% endblock %}

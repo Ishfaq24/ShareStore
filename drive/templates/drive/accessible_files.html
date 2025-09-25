@@ -1,0 +1,11 @@
+<h1>Files Shared With You / Public Files</h1>
+<ul>
+    {% for file in files %}
+        <li>
+            {{ file.name }} - Uploaded by {{ file.user.username }}
+            <a href="{% url 'download' file.id %}">Download</a>
+        </li>
+    {% empty %}
+        <li>No files available.</li>
+    {% endfor %}
+</ul>

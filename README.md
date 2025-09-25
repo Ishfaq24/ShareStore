@@ -4,10 +4,38 @@
 
 Share Store allows users to register, log in, upload files, and manage access permissions for those files. Users can share their files with specific individuals or make them accessible to everyone. Additionally, users can view files shared with them by others. Share Store employs **Cloudinary** for file storage and retrieval. It provides features like user authentication, file upload/download, access control, password change, and account deletion, making it a versatile file-sharing platform.
 
-[Project Demo](https://sharest.onrender.com)
+[Project Live Demo](https://sharest.onrender.com)
 
 ## Updates
 - **Discord Integration:** Enhanced the platform with a new feature that automates the process of uploading files `(college lecture slides in my case)` to Discord. Now, when users upload files containing specific keywords (e.g., lecture names or topics like Math or TOC) from their accounts, these files are automatically sent to a designated Discord channel, as specified in the environment variables. This integration eliminates the need for manual file transfers, saving time and ensuring that the content is promptly shared with the relevant Discord community.
+
+## ✨ Features  
+
+### 🔐 User Management  
+- Secure **User Registration & Login**  
+- **Change Password** and **Delete Account** options  
+
+### 📂 File Management  
+- Upload, download, and delete files  
+- Manage **access permissions** (private, shared with specific users, or public)  
+- View files shared by others in your dashboard  
+
+### ☁️ Cloudinary Integration  
+- Files are securely uploaded and retrieved using **Cloudinary**  
+- Automatic handling of file metadata  
+
+### 🤖 Discord Integration (New)  
+- Files uploaded with **specific keywords** (e.g., "Math", "TOC") are automatically posted to a **designated Discord channel**  
+- Keywords and channel mappings are configurable via **`.env`**  
+- Saves time by eliminating manual file transfers to Discord  
+
+### 🖥️ Tech Stack  
+- **Backend:** Django  
+- **Frontend:** HTML, CSS, Bootstrap, JavaScript  
+- **Storage:** Cloudinary  
+- **Integration:** Discord API  
+
+---
 
 **Screenshots**  
 

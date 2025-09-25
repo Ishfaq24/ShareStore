@@ -13,7 +13,7 @@ Share Store allows users to register, log in, upload files, and manage access pe
 
 
 <section style="text-align:center" align="center">
-    <img src='screenshots/dev-wizard-automated-upload.jpg?raw=true' alt='Files posted/uploaded by a discord bot to a specific thread/channel.' width='250px' />
+    <img src='screenshots/register.png?raw=true' alt='Files posted/uploaded by a discord bot to a specific thread/channel.' width='250px' />
 </section>
 
 ### Distinctiveness and Complexity
